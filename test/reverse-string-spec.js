@@ -1,5 +1,5 @@
 // Your code here
-const reverseString = require('../problems/reverse-string');
+const { reverseString } = require('../problems/reverse-string');
 const { expect } = require('chai');
 
 
@@ -10,5 +10,10 @@ describe('reverseString Function', function() {
         let reversedString = reverseString(passedString);
 
         expect(reversedString).to.equal(resultString);
+    });
+
+    it('When invoked with a non-string argument, it will throw a TypeError', function() {
+        let myString = 30;
+        expect(() => reverseString(myString)).to.throw(TypeError);
     })
 })
