@@ -14,9 +14,11 @@ describe('reciprocal function', function() {
     it('takes in a number, and returns the reciprocal of that number', function() {
         let num = 2;
         let fracNum = 3/2;
-        let decNum = 3.25
+        let decNum = 3.25;
+        let nonNum = true;
         expect(() => reciprocal(num)).to.equal(0.5);
         expect(() => reciprocal(fracNum)).to.equal(0.667));
         expect(() => reciprocal(decNum)).to.equal(0.308);
+        expect(() => reciprocal(nonNum)).to.throw(TypeError);
     });
 });
