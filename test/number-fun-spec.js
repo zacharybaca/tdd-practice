@@ -12,6 +12,11 @@ describe('returnsThree function', function() {
 
 describe('reciprocal function', function() {
     it('takes in a number, and returns the reciprocal of that number', function() {
-        expect(() => reciprocal(num)).to.equal(1/num);
+        let num = 2;
+        let fracNum = 3/2;
+        let decNum = 3.25
+        expect(() => reciprocal(num)).to.equal(1/2);
+        expect(() => reciprocal(fracNum)).to.equal(2/3);
+        expect(() => reciprocal(decNum)).to.equal(0.308);
     });
 });
