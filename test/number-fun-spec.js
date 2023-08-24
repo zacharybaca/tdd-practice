@@ -15,10 +15,12 @@ describe('reciprocal function', function() {
         let num = 2;
         let fracNum = 3/2;
         let decNum = 3.25;
-        let nonNum = true;
-        expect(() => reciprocal(num)).to.equal(0.5);
-        expect(() => reciprocal(fracNum)).to.equal(0.667));
-        expect(() => reciprocal(decNum)).to.equal(0.308);
+        expect(reciprocal(num)).to.equal(0.5);
+        expect(reciprocal(fracNum)).to.be.closeTo(0.667, 0.001);
+        expect(reciprocal(decNum)).to.be.closeTo(0.308, 0.001);
+    });
+    it('throws a TypeError if a non-number is passed in as an argument', function() {
+        let nonNum = 'hello';
         expect(() => reciprocal(nonNum)).to.throw(TypeError);
     });
 });

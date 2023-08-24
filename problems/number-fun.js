@@ -5,14 +5,16 @@ function returnsThree() {
 
 function reciprocal(n) {
   // Your code here
+  if (typeof n !== "number") {
+    throw new TypeError("Input is not an Integer");
+  }
+
   try {
     if (Number.isInteger(n)) {
     return 1/n;
-  } else if (typeof n !== "number") {
-    throw new TypeError("Input is not an Integer");
   } else {
     let decNum = 1/n;
-    return decNum.toFixed(3);
+    return decNum;
   }
  } catch(e) {
      console.log(e.message);
