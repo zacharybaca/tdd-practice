@@ -15,8 +15,8 @@ describe('reciprocal function', function() {
         let num = 2;
         let fracNum = 3/2;
         let decNum = 3.25
-        expect(() => reciprocal(num)).to.equal(1/2);
-        expect(() => reciprocal(fracNum)).to.equal(2/3);
+        expect(() => reciprocal(num)).to.equal(0.5);
+        expect(() => reciprocal(fracNum)).to.equal(0.666));
         expect(() => reciprocal(decNum)).to.equal(0.308);
     });
 });
